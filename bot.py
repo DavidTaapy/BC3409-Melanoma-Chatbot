@@ -22,10 +22,10 @@ def handle_message(update, context):
 def handle_photo(update, context):
     # Get Image & Save To Images Folder
     photo = update.message.photo[-1].get_file()
-    photo.download('./images/image.jpg')
+    photo.download('image.jpg')
     
     # Process Image
-    tensor = convert_imgpath_to_tensor('./images/image.jpg')
+    tensor = convert_imgpath_to_tensor('image.jpg')
     prediction = get_pred_from_img(tensor)
     response = f"The prediction for the image is {prediction}!\n\n"
 
@@ -55,9 +55,9 @@ def convert_imgpath_to_tensor(imgpath):
 # Get Predictions From An Image
 def get_pred_from_img(img_tensor):
     # Import Models
-    rn_imported = load_model("./models/ResNet.h5")
-    dt_imported = joblib.load("./models/DecisionTree")
-    rf_imported = joblib.load("./models/RandomForest")
+    rn_imported = load_model("ResNet.h5")
+    dt_imported = joblib.load("DecisionTree")
+    rf_imported = joblib.load("RandomForest")
 
     # Get Predictions From The Models
     rf_dt_input = img_tensor.reshape(img_tensor.shape[0], img_tensor.shape[1] * img_tensor.shape[2] * img_tensor.shape[3])
