@@ -88,7 +88,7 @@ def main():
 
     # Get User Responses
     PORT = int(os.environ.get('PORT', 5000))
-    updater.start_webhook(listen = "0.0.0.0", port = PORT, url_path = TOKEN)
+    updater.start_webhook(listen = "0.0.0.0", port = int(PORT), url_path = TOKEN)
     updater.bot.setWebhook('https://melanoma-bot.herokuapp.com/' + TOKEN)
     updater.idle()
 
