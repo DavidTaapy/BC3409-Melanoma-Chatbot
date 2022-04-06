@@ -55,9 +55,9 @@ def convert_imgpath_to_tensor(imgpath):
 # Get Predictions From An Image
 def get_pred_from_img(img_tensor):
     # Import Models
-    rn_imported = load_model("ResNet.h5")
-    dt_imported = joblib.load("DecisionTree")
-    rf_imported = joblib.load("RandomForest")
+    rn_imported = load_model("./models/ResNet.h5")
+    dt_imported = joblib.load("./models/DecisionTree")
+    rf_imported = joblib.load("./models/RandomForest")
 
     # Get Predictions From The Models
     rf_dt_input = img_tensor.reshape(img_tensor.shape[0], img_tensor.shape[1] * img_tensor.shape[2] * img_tensor.shape[3])
