@@ -71,7 +71,10 @@ def get_pred_from_img(img_tensor):
     if len(set(List)) < 3:
         return labels[max(set(List), key = List.count)]
     else:
-        return "melanoma"
+        if List[0] == 2:
+            return "keratoses"
+        else:
+            return "melanoma"
 
 def main():
     # Initialise Robot
