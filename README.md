@@ -7,4 +7,4 @@ The following contains the code for a telegram chatbot that processes an image u
 - Keratoses
 
 ## Models
-The models used to analyse the images include RESNET, decision tree and random forest! The main focus of the AI model was set such that we have an accuracy for melanoma (skin cancer) of close to 100% as it is extremely costly if we predicted a false negative as it can result in late treatement!
+The models used to analyse the images include RESNET, decision tree and random forest! The main focus of the AI model was set such that we have an accuracy for melanoma (skin cancer) of close to 100% as it is extremely costly if we predicted a false negative as it can result in late treatment!
